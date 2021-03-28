@@ -1,5 +1,9 @@
 package guru.springframework.spring5webapp.domain;
 
+<<<<<<< HEAD
+=======
+import javax.persistence.*;
+>>>>>>> refs/remotes/origin/add-publisher
 import java.util.HashSet;
 import java.util.Set;
 
@@ -38,17 +42,29 @@ public class Author {
 		this.firstName = firstName;
 	}
 
+<<<<<<< HEAD
 	public String getLastName() {
 		return lastName;
 	}
+=======
+    @ManyToMany(mappedBy = "authors")
+    private Set<Book> books = new HashSet<>();
+>>>>>>> refs/remotes/origin/add-publisher
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 
+<<<<<<< HEAD
 	public Set<Book> getBooks() {
 		return books;
 	}
+=======
+    public Author(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+>>>>>>> refs/remotes/origin/add-publisher
 
 	public void setBooks(Set<Book> books) {
 		this.books = books;

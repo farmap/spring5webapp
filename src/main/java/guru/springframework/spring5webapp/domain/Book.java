@@ -1,5 +1,9 @@
 package guru.springframework.spring5webapp.domain;
 
+<<<<<<< HEAD
+=======
+import javax.persistence.*;
+>>>>>>> refs/remotes/origin/add-publisher
 import java.util.HashSet;
 import java.util.Set;
 
@@ -42,9 +46,16 @@ public class Book {
 		this.title = title;
 	}
 
+<<<<<<< HEAD
 	public String getIsbn() {
 		return isbn;
 	}
+=======
+    @ManyToMany
+    @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"),
+            inverseJoinColumns = @JoinColumn(name = "author_id"))
+    private Set<Author> authors = new HashSet<>();
+>>>>>>> refs/remotes/origin/add-publisher
 
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
@@ -54,9 +65,16 @@ public class Book {
 		return authors;
 	}
 
+<<<<<<< HEAD
 	public void setAuthors(Set<Author> authors) {
 		this.authors = authors;
 	}
+=======
+    public Book(String title, String isbn) {
+        this.title = title;
+        this.isbn = isbn;
+    }
+>>>>>>> refs/remotes/origin/add-publisher
 
 	public Long getId() {
 		return id;
